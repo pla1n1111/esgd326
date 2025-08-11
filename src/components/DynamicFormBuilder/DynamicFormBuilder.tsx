@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { DynamicForm } from './DynamicForm';
-import { FormConfig } from './types';
+import { DynamicForm } from '../DynamicForm/DynamicForm';
+import { FormConfig } from '../../utils/types';
+
+import './DynamicFormBuilder.scss';
 
 export const DynamicFormBuilder: React.FC = () => {
   const [config, setConfig] = useState<FormConfig>({
@@ -70,15 +72,15 @@ export const DynamicFormBuilder: React.FC = () => {
               />
             </label>
           </div>
-          <button onClick={handleBuild}>Build Form</button>
-          <button onClick={handleBack} className="back-button">
+          <button className='btn' onClick={handleBuild}>Build Form</button>
+          <button onClick={handleBack} className="back-button btn">
             Back to Home
           </button>
         </>
       ) : (
         <>
           <DynamicForm config={config} />
-          <button onClick={handleReset} className="reset-button">
+          <button onClick={handleReset} className="reset-button btn">
             Build Another Form
           </button>
         </>

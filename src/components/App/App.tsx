@@ -1,17 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Layout } from '../Layout/Layout';
+import { Route, Routes } from 'react-router-dom';
 import { Home } from '../Home/Home';
-import { DynamicFormBuilder } from '../DynamicForm/DynamicFormBuilder';
+import { DynamicFormBuilder } from '../DynamicFormBuilder/DynamicFormBuilder';
 
 function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/form" element={<DynamicFormBuilder />} />
-      </Routes>
-    </Layout>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/form" element={<DynamicFormBuilder />} />
+    </Routes>
   );
 }
 

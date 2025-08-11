@@ -10,8 +10,8 @@ export const Home: React.FC = () => {
 
   return (
     <div className="home">
-      <h1>Welcome to Dynamic Form Builder</h1>
-      <button onClick={handleNavigate}>FORM</button>
+      <h1>Welcome to Dynamic form builder</h1>
+      <button className='btn' onClick={handleNavigate}>FORM</button>
     </div>
   );
 };

@@ -1,6 +1,8 @@
 import React from 'react';
-import { FormConfig } from './types';
+import { FormConfig } from '../../utils/types';
 import { useState } from 'react';
+
+import './DynamicForm.scss';
 
 interface DynamicFormProps {
   config: FormConfig;
@@ -25,7 +27,7 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({ config }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="dynamic-form">
+    <form onSubmit={handleSubmit} className="form-dynamic">
       <h2>Your Dynamic Form</h2>
       
       {Array.from({ length: config.input }).map((_, i) => (
@@ -69,7 +71,7 @@ export const DynamicForm: React.FC<DynamicFormProps> = ({ config }) => {
         </div>
       ))}
 
-      <button type="submit">Submit Form</button>
+      <button type="submit" className='btn'>Submit Form</button>
     </form>
   );
 };
